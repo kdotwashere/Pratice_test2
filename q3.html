@@ -47,8 +47,16 @@
         </section>
     </main>
     <footer>
-        &copy; me 2020
+        &copy; <current-year></current-year> Kofi
     </footer>
+    <script>
+    class CurrentYear extends HTMLElement {
+        connectedCallback() {
+            this.textContent = new Date().getFullYear();
+        }
+    }
+    customElements.define("current-year", CurrentYear);
+</script>
 </body>
 
 </html>
